@@ -1,8 +1,41 @@
-import Image from 'next/image'
 
+import VideoSuggestedOne from "@/components/videosuggestedone";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <section className="w-full min-h-[150vh] p-4 contenedor ">
+      <VideoSuggestedOne />
+    </section>
+  );
+}
+/* 
+  <article
+        className="md:w-[80%] w-[90%] mx-auto p-3 m-2 rounded-md min-h-[70vh] shadow-xl bg-gray-100
+       flex md:flex-row flex-col items-center justify-between"
+      >
+        <Image
+          src="/vercel.svg"
+          alt="Vercel Logo"
+          className="dark:invert m-10"
+          width={300}
+          height={300}
+          priority
+        />
+        <Image
+          src={desk}
+          alt="Escritorio de programador"
+          className="dark:invert m-5 rounded-md hover:shadow-xl lg:flex hidden "
+          width={500}
+          height={500}
+          priority
+        />
+      </article>
+
+  <article className="w-[95%] mx-auto rounded-md h-[100vh] bg-gray-700 mt-10">
+
+  </article>
+
+
+  <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
@@ -109,5 +142,4 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
-}
+*/
