@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import "./sidebar.css";
-
 import {
   MdHomeFilled,
   MdOutlineSubscriptions,
@@ -13,7 +13,16 @@ import { GoVideo } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 //import { FaBattleNet } from "react-icons/fa";
 
-function SideBar() {
+function SideBar({ datos }) {
+  const channel_list = [
+    "Programación",
+    "Midu Dev",
+    "Carlos Azaustre",
+    "Bluuweb",
+    "Developero",
+    "La cocina del código",
+  ];
+
   const list_style =
     "flex lg:flex-row flex-col lg:text-sm cursor-pointer items-center w-full py-1 hover:bg-[#F2F2F2] rounded-xl transition-all lg:justify-start justify-center";
   const list_subscription =
@@ -23,7 +32,8 @@ function SideBar() {
   const live_icon =
     "w-8 h-8 text-red-500 text-[.7em] font-semibold flex items-center justify-center";
   const channels =
-    "w-8 h-8 text-gray-800 lg:mr-5 flex items-center justify-center text-[1.6em] bg-gray-800 rounded-full";
+    "w-8 h-8 text-gray-800 lg:mr-5 flex items-center justify-center text-[1.6em] bg-gray-800 rounded-full overflow-hidden";
+
   return (
     <div className="lg:w-[250px] md:w-[100px] md:flex hidden h-[90vh]  flex-col fixed left-0 items-center top-[56px] ">
       <ul
@@ -89,59 +99,29 @@ function SideBar() {
         <h2 className="text-[1.1em] font-semibold mb-2 mt-5 lg:flex hidden">
           Suscripciones
         </h2>
-        <li className={`${list_subscription} justify-between`}>
-          <div className="flex items-center">
-            <span className={`${channels} `}></span>
-            <h3 className="lg:flex hidden"> Programación </h3>
-          </div>
 
-          <span className={`${live_icon}`}>((&bull;))</span>
-        </li>
-        <li className={`${list_subscription} justify-between`}>
-          <div className="flex items-center">
-            <span className={`${channels} `}></span>
-            <h3 className="lg:flex hidden"> Midu Dev</h3>
-          </div>
-          <span className={`${live_icon}`}>
-          ((&bull;))
-          </span>
-        </li>
-        <li className={`${list_subscription} justify-between`}>
-          <div className="flex items-center">
-            <span className={`${channels} `}></span>
-            <h3 className="lg:flex hidden"> Carlos Azaustre</h3>
-          </div>
-          <span className={`${live_icon}`}>
-          ((&bull;))
-          </span>
-        </li>
-        <li className={`${list_subscription} justify-between`}>
-          <div className="flex items-center">
-            <span className={`${channels}`}></span>
-            <h3 className="font-medium  lg:flex hidden"> Bluuweb</h3>
-          </div>
-          <span className={`${live_icon}`}>
-          ((&bull;))
-          </span>
-        </li>
-        <li className={`${list_subscription} justify-between`}>
-          <div className="flex items-center">
-            <span className={`${channels}`}></span>
-            <h3 className="font-medium lg:flex hidden"> Developero</h3>
-          </div>
-          <span className={`${live_icon}`}>
-          ((&bull;))
-          </span>
-        </li>
-        <li className={`${list_subscription} justify-between`}>
-          <div className="flex items-center">
-            <span className={`${channels}`}></span>
-            <h3 className="font-medium lg:flex hidden">La cocina del código</h3>
-          </div>
-          <span className={`${live_icon}`}>
-          ((&bull;))
-          </span>
-        </li>
+        {datos.map((channel) => {
+          return (
+            <li
+              key={channel.id}
+              className={`${list_subscription} justify-between`}
+            >
+              <div className="flex items-center">
+                <span className={`${channels} `}>
+                  <img
+                    src={channel.avatar}
+                    alt="logo channel"
+                    className="w-8 h-8 rounded-full"
+                  />
+                </span>
+                <h3 className="lg:flex hidden">
+                  {channel_list[channel.id - 1]}{" "}
+                </h3>
+              </div>
+              <span className={`${live_icon}`}>((&bull;))</span>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

@@ -1,4 +1,4 @@
-import ApiCallComponent from "@/components/apicallcomponent";
+/* import ApiCallComponent from "@/components/apicallcomponent";
 import UserCard from "@/components/usercard";
 import Image from "next/image";
 
@@ -11,7 +11,7 @@ async function getUsers() {
 async function getAlbums() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await res.json();
-  /*  await new Promise((resolve) => setTimeout(resolve, 1000)); */
+  /*  await new Promise((resolve) => setTimeout(resolve, 1000)); 
   return data;
 }
 
@@ -47,7 +47,7 @@ async function ApiCalling() {
 {users.map((user) => {
          return (
          <div key={user.id}>
-       {/* <Image src={`https://reqres.in/img/faces/6-image.jpg`} alt="user profile" /> */}
+       <Image src={`https://reqres.in/img/faces/6-image.jpg`} alt="user profile" />
          </div>
 
          );
@@ -64,3 +64,4 @@ async function ApiCalling() {
 }
 
 export default ApiCalling;
+ */

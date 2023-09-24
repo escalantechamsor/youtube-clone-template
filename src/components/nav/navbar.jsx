@@ -3,8 +3,11 @@ import React from "react";
 import "./navbar.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { BsYoutube } from "react-icons/bs";
-import { PiMicrophoneFill } from "react-icons/pi";
+import { PiMicrophoneFill, PiVideoCameraLight } from "react-icons/pi";
 import { GoSearch } from "react-icons/go";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import Image from "next/image";
+import user_profile from "../../img/jpg/user_profile.jpg";
 
 function Navbar() {
   return (
@@ -22,11 +25,14 @@ function Navbar() {
       </div>
 
       <div className="lg:w-[700px] md:w-[300px] h-[40px] md:flex hidden justify-between">
-
         <div className="flex lg:w-[640px] h-[100%] rounded-[1.2em] overflow-hidden border-[1px] border-gray-300 ">
-          <input 
-          placeholder="Buscar"
-          className="h-[40px] lg:w-[590px] md:w-[200px] outline-none px-8 text-gray-600 placeholder:text-sm bg-transparent" type="text" name="search" id="search" />
+          <input
+            placeholder="Buscar"
+            className="h-[40px] lg:w-[590px] md:w-[200px] outline-none px-8 text-gray-600 placeholder:text-sm bg-transparent"
+            type="text"
+            name="search"
+            id="search"
+          />
           <button className="w-[50px] h-[40px] hover:bg-[#F2F2F2] bg-[#F8F8F8] text-[1.3em] flex items-center justify-center border-l-[1px] border-gray-300">
             <GoSearch />
           </button>
@@ -36,7 +42,25 @@ function Navbar() {
           <PiMicrophoneFill />
         </button>
       </div>
-      <div className="w-[225px] h-[40px] bg-green-500 flex"></div>
+      <div className="w-[150px] h-[40px]  flex items-center justify-between mx-1 text-[1.5em] ">
+        <button className="w-10 h-10 rounded-full  flex items-center justify-center hover:bg-gray-200">
+          <PiVideoCameraLight />
+        </button>
+        <button className="w-10 h-10 rounded-full relative flex items-center justify-center text-[1.2em] hover:bg-gray-200">
+          <IoIosNotificationsOutline />
+          <span className="absolute top-0 right-0 w-5 h-5 bg-[#CC0000] text-gray-100 text-[0.7rem] rounded-full flex items-center justify-center">
+            9+
+          </span>
+        </button>
+        <button className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+          <Image
+            src={user_profile}
+            width={40}
+            height={40}
+            alt="Picture of the user"
+          />
+        </button>
+      </div>
     </nav>
   );
 }
