@@ -1,27 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
-//import some from '../../img/jpg/dragon.jpg'
-function Short_video() {
-  const image_video_route = [
-    {
-      imagen1: "/img/jpg/art.jpg",
-      imagen2: "/img/jpg/dragon.jpg",
-      imagen3: "/img/jpg/fish.jpg",
-      imagen4: "/img/jpg/man.jpg",
-      imagen5: "/img/jpg/draw.jpg",
-    },
-  ];
 
+function Short_video() {
   return (
-    <div className="h-[60vh] rounded-xl overflow-hidden flex flex-col ">
-      <div className="w-full h-[80%] rounded-xl bg-sky-500 ">
-      
-      </div>
-      <div className="w-full h-[20%]  pt-2">
-        <h2 className="text-base font-medium text-gray-800">
+    <div className="h-[60vh] rounded-xl overflow-hidden flex flex-col">
+      <div
+        className="w-full h-[48vh] rounded-xl bg-gradient-to-r from-sky-500 to-sky-400 
+      shadow-md"
+      ></div>
+      <div className="w-full h-[20%] pl-1 pt-3">
+        <h2 className="text-[1rem] font-semibold text-gray-900">
           Titulo del video short
         </h2>
-        <p className="text-sm text-gray-700 mt-1">350 K de visualizaciones</p>
+        <p className="text-[0.8rem] text-gray-700">350 K de visualizaciones</p>
       </div>
     </div>
   );

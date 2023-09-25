@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export function GET() {
+ export function GET() {
   return NextResponse.json({
     message: "Datos desde la API",
     name: "Rafael",
@@ -8,7 +8,10 @@ export function GET() {
     role: "Frontend developer",
     skills: ["HTML", "CSS", "Javascript", "React", "NextJS"],
   });
-}
+} 
+
+
+
 export function POST() {
   return NextResponse.json({
     message: "Introducir datos a API",

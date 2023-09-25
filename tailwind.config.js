@@ -11,6 +11,8 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          'art': "url('/img/jpg/dragon.jpg')",
+          'desk': "url('/img/jpg/desk.jpg')",
       },
     },
     screens: {

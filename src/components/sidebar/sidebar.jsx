@@ -13,7 +13,14 @@ import { GoVideo } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 //import { FaBattleNet } from "react-icons/fa";
 
-function SideBar({ datos }) {
+async function getUsers() {
+  const res = await fetch("https://reqres.in/api/users");
+  const data = await res.json();
+  return data.data;
+}
+
+async function SideBar() {
+  const datos = await getUsers();
   const channel_list = [
     "Programación",
     "Midu Dev",

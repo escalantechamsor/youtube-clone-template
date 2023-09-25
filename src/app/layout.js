@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import SideBar from "@/components/sidebar/sidebar";
 import Suggestions from "@/components/content_suggestions/suggestions";
+import GlobalContext from "@/context/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,10 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        <main className="flex">
-          {children}
-        </main>
+        <GlobalContext>
+          <Navbar />
+          <main className="flex">{children}</main>
+        </GlobalContext>
       </body>
     </html>
   );
