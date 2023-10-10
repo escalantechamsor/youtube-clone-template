@@ -28,6 +28,8 @@ async function SideBar() {
     "Bluuweb",
     "Developero",
     "La cocina del código",
+    "FaztCode",
+    "FaztTech",
   ];
 
   const list_style =
@@ -122,7 +124,7 @@ async function SideBar() {
                   />
                 </span>
                 <h3 className="lg:flex hidden">
-                  {channel_list[channel.id - 1]}{" "}
+                  {channel_list[channel.id - 1]}
                 </h3>
               </div>
               <span className={`${live_icon}`}>((&bull;))</span>

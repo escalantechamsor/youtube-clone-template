@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
- export function GET() {
+  export function GET() {
   return NextResponse.json({
     message: "Datos desde la API",
     name: "Rafael",
@@ -8,9 +8,13 @@ import { NextResponse } from "next/server";
     role: "Frontend developer",
     skills: ["HTML", "CSS", "Javascript", "React", "NextJS"],
   });
-} 
+}  
 
-
+/*  export async function GET() {
+  const res = await fetch('https://reqres.in/api/users')
+  const data = await res.json()
+ console.log(data.data)
+}  */
 
 export function POST() {
   return NextResponse.json({

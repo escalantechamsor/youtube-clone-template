@@ -9,18 +9,15 @@ export function useChannelsInfo() {
 
 function GlobalContext({ children }) {
   const [channelInfo, setChannelInfo] = useState([]);
-  
 
-
-useEffect(() => {
-getUsers();
-}, [])
-async function getUsers() {
+  useEffect(() => {
+    getUsers();
+  }, []);
+  async function getUsers() {
     const res = await fetch("https://reqres.in/api/users");
     const data = await res.json();
-    setChannelInfo(data.data)
+    setChannelInfo(data.data);
   }
-
 
   return (
     <Channels_Info.Provider value={channelInfo}>
