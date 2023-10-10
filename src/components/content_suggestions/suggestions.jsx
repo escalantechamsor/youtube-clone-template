@@ -25,9 +25,7 @@ function Suggestions() {
   ];
   const goLeft = () => {
     const btnLeft = document.querySelector("#scrolling_button-left");
-    //const btnRight = document.querySelector('#scrolling_button-right');
     const scrollContainer = document.querySelector(".sugested_content");
-
     btnLeft.addEventListener("click", () => {
       scrollContainer.scrollLeft -= 50;
     });

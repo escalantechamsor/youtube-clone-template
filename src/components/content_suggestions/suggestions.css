@@ -18,8 +18,6 @@
 .sugested_content::-webkit-scrollbar-thumb {
     background-color: #FFFFFF;
     border-radius: 20px;
-
-
 }
 
 .sugested_content::-webkit-scrollbar-track {
@@ -34,7 +32,6 @@
 .sugested_content:hover .directional {
     opacity: 1;
     transition: all;
-    
 }
 
 .sugested_content .directional {

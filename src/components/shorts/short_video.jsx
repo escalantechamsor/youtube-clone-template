@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-//import art from '@/img/jpg/man.png'
 function Short_video({ back }) {
   return (
     <div className="h-[60vh] rounded-xl overflow-hidden flex flex-col">

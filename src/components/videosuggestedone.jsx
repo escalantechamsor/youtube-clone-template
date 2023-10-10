@@ -1,8 +1,6 @@
-
 import React from "react";
 import CardContentOne from "./cardcontentone";
 import Link from "next/link";
-//import { useChannelsInfo } from "@/context/page";
 
 async function getUsers() {
   const res = await fetch("https://reqres.in/api/users");

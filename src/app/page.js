@@ -5,8 +5,6 @@ import VideoSuggestedOne from "@/components/videosuggestedone";
 import { BsYoutube } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 
-//API DE PEXELS:   ppWAHg7IL81CZEPARXS9l7xUdk7Bw75sbonsSwq16qTfBxkHhaMS3oMd
-
 export default async function Home() {
   return (
     <section className="flex w-full min-h-[100vh]">
@@ -36,7 +34,6 @@ export default async function Home() {
               <IoIosArrowDown />
             </button>
           </section>
-
           <VideoSuggestedOne />
         </section>
       </section>

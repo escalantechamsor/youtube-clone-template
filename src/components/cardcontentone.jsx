@@ -2,12 +2,9 @@
 import React from "react";
 
 function CardContentOne({ dato }) {
- 
   return (
     <div className="rounded-xl overflow-hidden flex flex-col md:h-[50vh] h-[60vh] cursor-pointer">
-      <div className="w-full  h-[60%] bg-gray-800 rounded-xl overflow-hidden">
-        {/*  <img src={dato.avatar} className="w-full h-[100%] " alt="" /> */}
-      </div>
+      <div className="w-full  h-[60%] bg-gray-800 rounded-xl overflow-hidden"></div>
       <div className="w-full h-[40%]  flex">
         <img
           src={dato.avatar}
